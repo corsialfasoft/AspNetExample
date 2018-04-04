@@ -22,6 +22,10 @@ namespace AspNetMVCExample.Controllers {
             ViewBag.Oggetto = new Contatto("Luca","Salzone");
             return View();
         }
+        
+        public ActionResult MyPage() {
+            return View();
+        }
     }
 
     public class Contatto{

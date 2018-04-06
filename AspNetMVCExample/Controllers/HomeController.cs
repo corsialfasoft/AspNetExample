@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AspNetMVCExample.Models;
 
 namespace AspNetMVCExample.Controllers {
     public class HomeController : Controller {
@@ -22,8 +23,14 @@ namespace AspNetMVCExample.Controllers {
             ViewBag.Oggetto = new Contatto("Luca","Salzone");
             return View();
         }
-        
+
         public ActionResult MyPage() {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult MyPage(TorneoModel torneo) {
+            ViewBag.Message = "inserito " + torneo.Descrizione;
             return View();
         }
     }

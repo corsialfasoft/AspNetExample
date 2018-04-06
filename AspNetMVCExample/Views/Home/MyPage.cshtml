@@ -4,12 +4,15 @@
     ViewBag.Title = "Home Page";
 }
 
-<h1> Form Torneo @ViewBag.Message</h1>
-
+<h1> Form Torneo </h1>
 <!-- DEFINISCO FORM CON HTML HELPER-->
 @using (Html.BeginForm("MyPage", "Home", FormMethod.Post)) {
     <div class="text-danger">
+        @ViewBag.ErrorMessage
         @Html.ValidationSummary()
+    </div>
+    <div class="text-warning">
+        @ViewBag.Message
     </div>
     <div class="row">
         <div class="col-md-6">

@@ -15,5 +15,6 @@ namespace AspNetMVCExample.Models {
         [Required]
         [Range(10000, 15000)]
         public double Premio {get; set;}
+
     }
 }
